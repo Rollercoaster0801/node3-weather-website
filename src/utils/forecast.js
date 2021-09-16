@@ -7,7 +7,7 @@ const forecast = (latitude, longitude, callback) => {
       callback("Unable to connect to location services!", undefined);
     } else if (body.error) {
       callback("Unable to find location. Try another search", undefined);
-    } else if (!body.location.namef) {
+    } else if (!body.location.name) {
       callback("No data for that location.", undefined);
     } else {
       callback(
